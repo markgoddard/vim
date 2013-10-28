@@ -1,0 +1,21 @@
+set nocp
+
+filetype plugin on
+
+" colorscheme
+colorscheme desert
+
+" tabs
+set cindent
+"set expandtab apparently this shouldn't be used
+set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+
+" Line numbers on
+set number
+
+source ~/.vim/plugins/cscope_mappings.vim
+"source ~/.vim/plugins/omnicpp.vim
+
+source ${STACK_BASE}/cscope_repos.vim
