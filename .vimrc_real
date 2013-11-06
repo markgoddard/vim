@@ -1,13 +1,26 @@
+" Compatibility with Vi not required
 set nocp
 
+" Filetype
+filetype on
 filetype plugin on
+filetype indent on
 
-" colorscheme
+" Syntax highlighting
+syntax enable
+
+" Colorscheme
 colorscheme desert
 
-" tabs
+" Wild menu for tab autocompletion of vim commands, show list
+set wildmenu
+set wildmode=list:longest,full
+
+" C indentation
 set cindent
-"set expandtab apparently this shouldn't be used
+
+" Tabs - Gnodal style
+set noexpandtab
 set tabstop=8
 set shiftwidth=4
 set softtabstop=4
@@ -15,7 +28,12 @@ set softtabstop=4
 " Line numbers on
 set number
 
+" Key mappings for Cscope
 source ~/.vim/plugins/cscope_mappings.vim
+
+" Omnicpp C++ code completion - not used
 "source ~/.vim/plugins/omnicpp.vim
 
-source ${STACK_BASE}/cscope_repos.vim
+if !empty($STACK_BASE)
+    source ${STACK_BASE}/cscope_repos.vim
+endif
