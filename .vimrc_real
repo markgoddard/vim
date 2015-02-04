@@ -19,9 +19,9 @@ set wildmode=list:longest,full
 " C indentation
 set cindent
 
-" Tabs - Gnodal style
-set noexpandtab
-set tabstop=8
+" Tabs - soft tabs, 4 space width
+set expandtab
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
